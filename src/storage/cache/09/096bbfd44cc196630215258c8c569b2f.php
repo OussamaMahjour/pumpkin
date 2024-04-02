@@ -27,6 +27,7 @@ class __TwigTemplate_e978588043ad8a0231e5346ea0de92d4 extends Template
         $this->parent = false;
 
         $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
         ];
     }
 
@@ -34,7 +35,21 @@ class __TwigTemplate_e978588043ad8a0231e5346ea0de92d4 extends Template
     {
         $macros = $this->macros;
         // line 1
-        echo "hello";
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 4
+        echo "
+";
+    }
+
+    // line 1
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 2
+        echo "  ";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("header");
+        echo "
+";
     }
 
     /**
@@ -50,7 +65,7 @@ class __TwigTemplate_e978588043ad8a0231e5346ea0de92d4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  49 => 2,  45 => 1,  40 => 4,  38 => 1,);
     }
 
     public function getSourceContext()
