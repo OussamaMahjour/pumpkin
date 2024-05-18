@@ -1,0 +1,12 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/product.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.sub, .add {
+  cursor: pointer;
+}
+
+.sub:hover, .add:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZHVjdC4yM2UwZDUwYi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtBQUNKOztBQUNBO0VBQ0U7QUFFRixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vUHVtcGtpbi8uL3Jlc291cmNlcy9jc3MvcHJvZHVjdC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi5zdWIsLmFkZHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uc3ViOmhvdmVyLC5hZGQ6aG92ZXJ7XG4gIGJveC1zaGFkb3c6IHJnYmEoMCwgMCwgMCwgMC4yNCkgMHB4IDNweCA4cHg7XG59Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/

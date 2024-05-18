@@ -1,0 +1,16 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/account.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+header {
+  background-color: #495057;
+}
+
+header form {
+  display: none;
+}
+
+body {
+  background-color: #FCF1E7;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWNjb3VudC5hNDMzZWEwMi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtBQUNKOztBQUVBO0VBQ0k7QUFDSjs7QUFDQTtFQUNJO0FBRUosQyIsInNvdXJjZXMiOlsid2VicGFjazovL1B1bXBraW4vLi9yZXNvdXJjZXMvY3NzL2FjY291bnQuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJoZWFkZXJ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzQ5NTA1NztcbiAgICBcbn1cbmhlYWRlciBmb3Jte1xuICAgIGRpc3BsYXk6IG5vbmU7XG59XG5ib2R5e1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGQ0YxRTc7XG59Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/

@@ -19,8 +19,21 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry("header", "./resources/js/header.js")
-   // .addEntry("dashboard", "./resources/js/dashboard.js")
+    .addEntry("layout", "./resources/js/layout.js")
+    .addEntry("login","./resources/js/auth/login.js")
+    .addEntry("account","./resources/js/account.js")
+    .addEntry("index","./resources/js/index.js")
+    .addEntry("bootstrap","./node_modules/bootstrap/dist/js/bootstrap.js")
+    .addEntry("search","./resources/js/search.js")
+    .addEntry("basket","./resources/js/basket.js")
+    .addEntry("product","./resources/js/product.js")
+    .addEntry("404","./resources/js/404.js")
+    .addEntry("admin","./resources/js/admin/index.js")
+    .addEntry("pay","./resources/js/pay.js")
+
+
+  
+   
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()

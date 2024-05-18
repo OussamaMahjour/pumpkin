@@ -1,0 +1,84 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+        {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('account') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('account') }}
+    {% endblock %}
+
+<main>
+ 
+       
+        <div class="d-flex  row justify-content-around align-items-start pt-5 " style="height:100%;">
+            <div class="col-5   rounded overflow-hidden">
+               <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Info
+                    </div>
+                <div class="card-body">
+                    <p class="card-text">
+                    <b>First Name :</b>{{ user.firstName }}<br>
+                    <b>Last Name :</b>{{ user.lastName }}<br>
+                    <b>Email:</b>{{user.email}}
+                    <b>BirthDate :</b>{{ user.birthDate }}<br>
+                    </p>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-5  rounded overflow-hidden">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Info
+                    </div>
+                <div class="card-body">
+                    <p class="card-text">
+                    {{ user.adress }}
+                    </p>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                </div>
+            </div>
+            </div> 
+            <div class="col-5  rounded overflow-hidden">
+               <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Creadits
+                    </div>
+                <div class="card-body">
+                    <p class="card-text">
+                            0.00 Dhs
+                    </p>
+                    <a href="#" class="btn btn-primary">Add</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-5  rounded overflow-hidden">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Community
+                    </div>
+                <div class="card-body">
+                    <p class="card-text">
+                  
+                    </p>
+                    
+                </div>
+            </div>
+            </div> 
+
+        
+        </div>
+
+    <script class="filter-script">
+    
+    
+    </script>
+</main>
+
+{% endblock %}

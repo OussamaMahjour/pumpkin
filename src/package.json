@@ -17,6 +17,7 @@
         "webpack-notifier": "^1.15.0"
     },
     "dependencies": {
-        "@babel/plugin-transform-class-properties": "^7.24.1"
+        "@babel/plugin-transform-class-properties": "^7.24.1",
+        "core-js": "^3.36.1"
     }
 }

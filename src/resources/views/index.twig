@@ -1,0 +1,270 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+{% block additional_stylesheets %}
+            {{ encore_entry_link_tags('index') }}
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('index') }}
+    {% endblock %}
+
+<style>
+
+
+</style>
+
+   <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="{{ asset('build/imgs/kitchen1.jpg') }}" class="d-block w-100 c-img" alt="Slide 1">
+        <div class="carousel-caption mt-4">
+          <p class="mt-5 fs-3 text-uppercase"></p>
+          <h3 class="display-1 fw-bolder  text-capitalize">
+            Quality Tools 
+            for 
+            Inspired Cooking.</h3>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img  src="{{ asset('build/imgs/peakpx.jpg') }}"  class="d-block w-100 c-img" alt="Slide 2">
+        <div class="carousel-caption mt-4">
+          <p class="mt-5 fs-3 text-uppercase"></p>
+          <h3 class="display-1 fw-bolder  text-capitalize">
+            Crafting 
+            Comfort & Elegance
+            For Every Home</h3>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+       <img src="{{ asset('build/imgs/clothes.jpg') }}" class="d-block w-100 c-img" alt="Slide 3">
+        <div class="carousel-caption mt-4">
+          <p class="mt-5 fs-3 text-uppercase"></p>
+          <h3 class="display-1 fw-bolder  text-capitalize">
+           Elevate Your Style, 
+           Express Your Essence</h3>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+  <div class="container-lg  mt-5 text-center ">
+    <h4 class="bg-primary title text-white mb-0">Discover our new deals</h4>
+      <div id="products-carousel" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#products-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#products-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#products-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner container-lg  pt-3 bg-white ">
+      {% set break = false %}
+      {% for i in products %}
+      {%  if not break %}
+          {% if loop.index0 in [0,7,14] %}              
+                    <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}  ">
+                    <div class="row justify-content-center">
+          {% endif %}
+      <div class="col-auto">
+        
+            <div class="card  text-start product-card product-card-widget position-relative" id="{{ i.id }}">
+                <img src="{{ asset('build/imgs/products/'~i.id~'.jpg') }}" class="card-img-top" alt="...">
+                <div class="promotion position-absolute ">-{{ (100-((i.discountPrice/i.regularPrice)*100))|round(0, 'floor')}}%</div>
+                <div class="card-body">
+                    <h6 class="truncate-text">{{ i.name }}</h6>
+                    <h6 >{{ i.discountPrice }}.00 Dhs</h6>
+                    <p class="d-flex align-items-center justify-content-around">
+                          <small><del>{{ i.regularPrice }}.00 Dhs<del> </small>
+                          <button  class="btn outline-none btn-primary basket-button ignore" value={{ i.id }} style="border-radius:50px;">
+                          <i class="fa-solid
+                          {% if i.id in basket|keys %}
+                            fa-check
+                          {% else %}
+                           fa-cart-shopping
+                           {% endif %}"
+                           ></i>
+                          
+                          </button>
+                    </p>
+                    
+                </div> 
+            
+          </div> 
+             </div>
+          {% if loop.index0 in [6,13,20] %}
+                    </div>
+                  </div>
+                  {% if loop.index0 == 20 %}
+                    {% set break = true %}
+                  {% endif %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+           
+    
+    </div>
+    <button class="carousel-control-prev " type="button" style="width:3rem;" data-bs-target="#products-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark p-1" aria-hidden="true" style="border-radius:20px;"></span>
+      <span class="visually-hidden ">Previous</span>
+    </button>
+    <button class="carousel-control-next " type="button"  style="width:3rem;" data-bs-target="#products-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon  bg-dark" aria-hidden="true"  style="border-radius:20px;"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<div class="row justify-content-center mt-5 p-0">
+                
+   
+
+    
+    <div class="row justify-content-left  p-0 ">
+          <img src="https://www.marjanemall.ma/media/wysiwyg/home-page-07-05-2024/BANNER_PLEIN_AIR_DT.webp" style="width:100%;height:100%;">
+    </div>
+    </div>
+
+  <div class="row border bg-white mt-5 ">
+                 <h5 class=" title text-white text-center bg-primary p-1 mb-0">Kitchen</h5>
+   
+
+    
+    <div class="row justify-content-left m-1  p-0 pt-2 ">
+      {% set break = false %}
+      {% set count = 0 %}
+      {% for i in products %}
+      {%  if not break %}         
+                   
+        
+          {% if i.category == 'kitchen'%}
+        {% set count = count + 1%}
+      <div class="col-auto">
+        
+            <div class="card  text-start product-card product-card-widget position-relative" id="{{ i.id }}">
+                <img src="{{ asset('build/imgs/products/'~i.id~'.jpg') }}" class="card-img-top" alt="...">
+                <div class="promotion position-absolute ">-{{ (100-((i.discountPrice/i.regularPrice)*100))|round(0, 'floor')}}%</div>
+                <div class="card-body">
+                    <h6 class="truncate-text">{{ i.name }}</h6>
+                    <h6 >{{ i.discountPrice }}.00 Dhs</h6>
+                    <p class="d-flex align-items-center justify-content-around">
+                          <small><del>{{ i.regularPrice }}.00 Dhs<del> </small>
+                          <button  class="btn outline-none btn-primary basket-button ignore" value={{ i.id }} style="border-radius:50px;">
+                          <i class="fa-solid
+                          {% if i.id in basket|keys %}
+                            fa-check
+                          {% else %}
+                           fa-cart-shopping
+                           {% endif %}"
+                           ></i>
+                          
+                          </button>
+                    </p>
+                    
+                </div> 
+            
+          </div> 
+             </div>
+        {% endif %}
+         
+                   
+                  
+                  {% if count >= 7 %}
+                    {% set break = true %}
+                  {% endif %}
+       
+          {% endif %}
+          {% endfor %}
+           
+     </div>
+
+    
+  </div>
+
+<div class="row justify-content-center mt-5 p-0">
+                
+   
+
+    
+    <div class="row justify-content-left  p-0 ">
+          <img src="https://www.marjanemall.ma/media/wysiwyg/home-page-07-05-2024/banner_spring_deals_DT.webp" style="width:100%;height:100%;">
+    </div>
+    </div>
+    
+   <div class="row border bg-white mt-5 ">
+                 <h5 class=" title text-white text-center bg-primary p-1 mb-0">Clothes</h5>
+   
+
+    
+    <div class="row justify-content-left m-1  p-0 pt-2 ">
+      {% set break = false %}
+      {% set count = 0 %}
+      {% for i in products %}
+      {%  if not break %}         
+                   
+        
+          {% if i.category == 'clothes'%}
+        {% set count = count + 1%}
+      <div class="col-auto">
+        
+            <div class="card  text-start product-card product-card-widget position-relative" id="{{ i.id }}">
+                <img src="{{ asset('build/imgs/products/'~i.id~'.jpg') }}" class="card-img-top" alt="...">
+                <div class="promotion position-absolute ">-{{ (100-((i.discountPrice/i.regularPrice)*100))|round(0, 'floor')}}%</div>
+                <div class="card-body">
+                    <h6 class="truncate-text">{{ i.name }}</h6>
+                    <h6 >{{ i.discountPrice }}.00 Dhs</h6>
+                    <p class="d-flex align-items-center justify-content-around">
+                          <small><del>{{ i.regularPrice }}.00 Dhs<del> </small>
+                          <button  class="btn outline-none btn-primary basket-button ignore" value={{ i.id }} style="border-radius:50px;">
+                          <i class="fa-solid
+                          {% if i.id in basket|keys %}
+                            fa-check
+                          {% else %}
+                           fa-cart-shopping
+                           {% endif %}"
+                           ></i>
+                          
+                          </button>
+                    </p>
+                    
+                </div> 
+            
+          </div> 
+             </div>
+        {% endif %}
+         
+                   
+                  
+                  {% if count >= 7 %}
+                    {% set break = true %}
+                  {% endif %}
+       
+          {% endif %}
+          {% endfor %}
+           
+     </div>
+
+    
+  </div>
+
+</div>
+
+{% endblock %}

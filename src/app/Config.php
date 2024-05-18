@@ -14,7 +14,9 @@ class Config{
                 'dbname' => $env['DB_DATABASE'],
                 'driver' => $env['DB_DRIVER']??'pdo_mysql'
             ],
-            'environment' => $env['APP_ENVIRONMENT']?? 'production'
+            'environment' => $env['APP_ENVIRONMENT']?? 'production',
+            'app_name' =>'pumpkin',
+            'app_version'=>'1.0'
         ];
     }
     public function __get($name)

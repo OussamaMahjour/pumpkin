@@ -1,0 +1,42 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('login') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('login') }}
+    {% endblock %}
+
+
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<section class="container forms">
+            <div class="form login my-5 mx-auto">
+                <div class="form-content">
+                    <h1>Verification</h1>
+                    <form action="/verify" method="post">
+                        <div class="field input-field">
+                            <input type="number" placeholder="Code" name="verification" class="input">
+                        </div>
+                        
+                        <div class="field button-field">
+                            <button>Verify</button>
+                        </div>
+                    </form>
+                    
+            </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

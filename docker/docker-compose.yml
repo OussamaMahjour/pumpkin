@@ -8,6 +8,10 @@ services:
     container_name: Pumpkin-App
     restart: always
     working_dir: /var/www/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "9003:9003"
     volumes:
       - ../src:/var/www
     #  - ./php/:/usr/local/etc/php/

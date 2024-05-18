@@ -1,0 +1,50 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+        {% block additional_stylesheets %}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+           
+            {{ encore_entry_script_tags('search') }}
+            {{ encore_entry_script_tags('basket') }}
+    {% endblock %}
+
+
+<main class="container">
+    <table class="table table-hover table-bordered mt-5 table-striped"  >
+                <thead class="thead-dark">
+                    <tr >
+                        <th scope="col">Id</th>
+                        <th scope="col">Purchase Date</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Status</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody >
+                    {% for i in orders %}
+                    <tr>
+                        <th scope="row">{{ i.id }}</th>
+                        <td>{{ i.purchaseDate }}</td>
+                        <td>{{ i.price }} Dhs</td>
+                        <td>{{ i.status }}</td>
+
+                       
+                       
+
+                        
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+</main>
+
+
+{% endblock %}

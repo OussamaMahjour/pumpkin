@@ -1,5 +1,13 @@
 <?php
 
+use App\Middleware\OldFormMiddleware;
+use App\Middleware\AuthenticateMiddleware;
+use App\Middleware\StartSessionMiddleware;
+use App\Middleware\ValidationErrorsMiddleware;
+use App\Middleware\ValidationExceptionMiddleware;
+use App\Middleware\NotFoundMiddleware;
+use DI\Container;
+use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Views\TwigMiddleware;
 use Slim\Views\Twig;
@@ -14,10 +22,12 @@ $dotenv->load();
 
 //setup the PHP-DI container
 $container = require( CONFIG_PATH.'/container.php');
-AppFactory::setContainer($container);
-
- //create the main app 
-$app = AppFactory::create();
+$app = $container->get(App::class);
+$app->add(AuthenticateMiddleware::class);
 $app->add(TwigMiddleware::create($app, $container->get(Twig::class)));
-
+$app->add(ValidationExceptionMiddleware::class);
+$app->add(ValidationErrorsMiddleware::class);
+$app->add(OldFormMiddleware::class);
+$app->add(StartSessionMiddleware::class);
+$app->add(NotFoundMiddleware::class);
 return $app;

@@ -1,0 +1,75 @@
+
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+        {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('account') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('account') }}
+           
+    {% endblock %}
+<div class="container  overflow-hidden " style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+    <div class="row justify-content-center" >
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-light border col-3 account-menu" style="min-width:14rem;height:80vh;">
+          <a href="/" class=" align-items-center link-dark truncate-text text-decoration-none ">
+      
+            <span class="fs-4">{{user.userName}}</span>
+          </a>
+        <hr>
+    <ul class="nav nav-pills flex-column mb-auto items-list">
+      <li class="nav-item" >
+        <a href="#" class="nav-link active " name="accountInfo"  aria-current="page">
+          <i class="fa-solid fa-user  bi me-2"></i>
+          Personnal Information
+        </a>
+      </li>
+      <li >
+        <a href="#" class="nav-link link-dark" name="basket">
+          <i class="fa-solid fa-basket-shopping bi me-2"></i>
+          Basket
+        </a>
+      </li>
+      <li>
+        <a href="#" name="inbox" class="nav-link link-dark">
+          <i class="fa-solid fa-inbox bi me-2"></i>
+          Inbox
+        </a>
+      </li>
+      <li>
+        <a href="#" name="order" class="nav-link link-dark">
+          <i class="fa-solid fa-box bi me-2"></i>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" name="favorite" class="nav-link link-dark">
+          <i class="fa-solid fa-heart bi me-2"></i>
+          Favorites
+        </a>
+      </li>
+      
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="/logOut" class="d-flex align-items-center link-dark text-decoration-none">
+        <i class="fa-solid fa-right-from-bracket mx-3" style="transform: rotate(180deg);"></i>
+
+        <strong> Log Out</strong>
+      </a>
+     
+    </div>
+  </div>  
+  <div class="col-9 border bg-white account-content " style="max-height:80vh;">
+ 
+  </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,112 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+        {% block additional_stylesheets %}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+           
+            {{ encore_entry_script_tags('search') }}
+            {{ encore_entry_script_tags('basket') }}
+    {% endblock %}
+<main>
+<div class="container-lg basker-container ">
+
+
+        <div class="row pt-3" style="max-height:60vh;"> 
+            <div class="basket-products  overflow-scroll col-sm-9 col-12" style="max-height:75vh;"> 
+               
+                {% set totale = 0%}
+                {% for i in products %}
+                {% if i.id in basket|keys %}
+               <div class="product-card  card mb-3 overflow-hidden" name="{{ i.id }}" id="{{ i.id }}"  style="max-width: 100%; max-height:7rem;">
+                <div class="row  g-0">
+                
+                 <div class="col-auto bg-secondary">
+                  <span class="mx-1 text-center text-white fw-bold">x{{ basket[i.id]}} </span>
+                  <img src="{{ asset('build/imgs/products/'~i.id~'.jpg') }}" style="max-height:7rem;border-left:2px solid white;" class="img-fluid  rounded-start " alt="...">
+                 </div>
+                 <div class="col">
+                <div class="card-body">
+                <h5 class="d-flex justify-content-between truncate-text " >{{ i.name }}</h5>
+                <h6 class="mb-0">{{ i.discountPrice }}.00 Dhs</h6>
+                <p class=" d-flex align-items-start justify-content-between pt-0" style="width:100%;" >
+                <small><del>{{ i.regularPrice }}.00 Dhs<del></small>
+                <button  class="btn outline-none btn-secondary delete-basket-button ignore" value={{ i.id }} style="border-radius:50px;">
+                          <i class="fa-solid fa-trash-can"
+                           ></i>
+                          
+                          </button> </p>
+               
+                </div>
+            </div>
+            
+                </div>
+            </div>
+            {% set totale = totale + i.discountPrice * basket[i.id] %}
+            {% endif %}
+              {% endfor %}
+            </div>
+            <div class="basket-command col-sm-3 col-12 mb-5  p-0   " style="min-width:10rem;height:80vh;">
+             <div class="card text-center border" style="border:none;">
+                <div class="card-header">
+                     Totale
+                </div>
+                    <div class="card-body">
+                 <h5 class="card-title">{{ totale }},00 Dhs</h5>
+                 
+                 <a href="#" type="button" class="btn btn-primary order mb-3"  >Pay On delivery</a>
+                 <a href="/pay" type="button" class="btn btn-primary "  >Pay with Cart</a>
+                 </div>
+            
+            </div>
+             
+             </div>
+           
+        </div>
+</div>
+
+<script class="filter-script">
+    let delete_basket_button = document.querySelectorAll(".delete-basket-button");
+    let form = new FormData();
+    let order = document.querySelector(".order");
+
+
+     
+    delete_basket_button.forEach((element)=>{
+    element.addEventListener('click',function(e){
+      form.append('product',element.value);
+        fetch('/rmBasket',{
+          method: "POST",
+          body:form
+        })
+        .then(data=>{
+            
+            let div = document.querySelector("[name='"+element.value+"']");
+            div.remove();
+        })
+        ;
+    })
+
+  })
+    order.addEventListener('click',function(e){
+      fetch('/order',{
+        method:"POST",
+        body:new FormData()
+      })
+      .then(
+        response =>{
+          if(response.status==200){
+            window.location.reload();
+            
+          }
+        }
+      )
+   }) 
+</script>
+</main>
+
+{% endblock %}

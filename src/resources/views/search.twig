@@ -1,0 +1,231 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+        {% block additional_stylesheets %}
+        {{ encore_entry_link_tags('search') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('search') }}
+    {% endblock %}
+    <div class="container-lg ">
+        <div class="row">
+            <div class="filter col-sm-3 col-12 mb-5  p-0  bg-light border " style="min-width:10rem;">
+                <form method="get" action="/searchPage" class="card" style="width:100%;">
+                <div class="card-header ">
+                       <h2> Filter </h2>
+                </div>
+                <ul class="list-group  list-group-flush">
+                    <li class="list-group-item ">
+                      <h6 class="font-weight-bold mb-3">Averarge rating</h6>
+                       <ul class="rating d-flex justify-content-around p-0" data-mdb-toggle="rating" style="list-style-type:none;">
+                          <li>
+                            
+                            <i class="far fa-star  fa-sm text-primary"  title="1"></i>
+                         
+                          </li>
+                          <li>
+                            <i class="far fa-star fa-sm text-primary" title="2"></i>
+                          </li>
+                          <li>
+                            <i class="far fa-star fa-sm text-primary" title="3"></i>
+                          </li>
+                          <li>
+                            <i class="far fa-star fa-sm text-primary" title="4"></i>
+                          </li>
+                          <li>
+                            <i class="far fa-star fa-sm text-primary" title="5"></i>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item text-left">
+                    <section class="mb-4">
+                  <h6 class="font-weight-bold mb-3">Price</h6>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" title=25 value=0 name="flexRadioDefault" id="price-radio">
+                    <label class="form-check-label text-uppercase small text-muted" for="price-radio">
+                      Under 25
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" title=50 value=25 name="flexRadioDefault" id="price-radio2">
+                    <label class="form-check-label text-uppercase small text-muted" for="price-radio2">
+                      25 to 50
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" title=100 value=50 name="flexRadioDefault" id="price-radio3">
+                    <label class="form-check-label text-uppercase small text-muted" for="price-radio3">
+                      50 to 100
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" title=200 value=100 name="flexRadioDefault" id="price-radio4">
+                    <label class="form-check-label text-uppercase small text-muted" for="price-radio4">
+                      100 to 200
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio"  value=200 name="flexRadioDefault" id="price-radio5">
+                    <label class="form-check-label text-uppercase small text-muted" for="price-radio5">
+                      200 &amp; above
+                    </label>
+                  </div>
+                </section>
+                </li>
+                    <li class="list-group-item">
+                    <section class="mb-4" data-filter="condition">
+                  <h6 class="font-weight-bold mb-3">Category</h6>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="kitchen" id="condition-checkbox" name="category">
+                    <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox">
+                      Kitchen
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="furniture" id="condition-checkbox2" name="category" autocompleted="">
+                    <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox2">
+                      Furniture
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="clothes" id="condition-checkbox3" name="category" autocompleted="">
+                    <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox3">
+                      Clothes
+                    </label>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="electronics" id="condition-checkbox4" name="category">
+                    <label class="form-check-label text-uppercase small text-muted" for="condition-checkbox4">
+                      Electronices
+                    </label>
+                  </div>
+                </section>
+                </li>
+                <li class="list-group-item text-center">
+                    <button type="button" class="btn btn-primary search-button">Search</button>
+                </li>
+                </ul>
+                </form>
+            </div>
+            <div class="filter-content overflow-scroll col-sm-9 col-12" style="height:80vh;"> 
+            <div class="row">
+            {% for i in productsFilter %}
+            
+                    
+                   
+           <div class="col-auto">
+        
+            <div class="card  text-start product-card search-product-card position-relative" id="{{ i.id }}" >
+                <img src="{{ asset('build/imgs/products/'~i.id~'.jpg') }}" class="card-img-top" alt="...">
+                <div class="promotion position-absolute ">-{{ (100-((i.discountPrice/i.regularPrice)*100))|round(0, 'floor')}}%</div>
+
+                <div class="card-body">
+                    <h6 class="truncate-text">{{ i.name }}</h6>
+                    <h6 >{{ i.discountPrice }}.00 Dhs</h6>
+                    <p class="d-flex align-items-center justify-content-around">
+                          <small><del>{{ i.regularPrice }}.00 Dhs<del> </small>
+                          <button  class="btn btn-primary basket-button ignore" value={{ i.id }} style="border-radius:50px;">
+                          <i class="fa-solid
+                          {% if i.id in basket|keys %}
+                            fa-check
+                          {% else %}
+                           fa-cart-shopping
+                           {% endif %}"
+                           ></i>
+                          
+                          </button>
+                    </p>
+                    
+                </div> 
+            
+          </div> 
+             </div>
+                    
+                 
+                  
+         
+          {% endfor %}
+            </div>
+          </div>
+        </div>
+    
+    </div>
+<script class="filter-script">
+       let rate = false;
+      let minPrice =false;
+      let maxPrice =false;
+      let category =[];
+      let search_button = document.querySelectorAll(".search-button");
+      let price_radios = document.querySelectorAll("[name='flexRadioDefault']");
+      let categories = document.querySelectorAll("[name='category']");
+    
+      
+        const icon = document.querySelectorAll('.rating li i');
+        
+        icon.forEach((el) => {
+          el.addEventListener('click', function(event){
+           
+               for(var i=0;i<icon.length;i++){
+                 console.log(icon.length);
+                if(icon[i].title <= event.target.title){
+                  icon[i].classList.add('fa-solid')
+                  icon[i].classList.remove('far');
+                  }
+                else{
+                  icon[i].classList.remove('fa-solid')
+                  icon[i].classList.add('far');
+                }
+              }
+             
+              rate = Number(event.target.title);
+  
+          });  
+          search_button.forEach((el)=>{
+            el.addEventListener('click',function(){
+              price_radios.forEach((element)=>{
+                 
+                 if(element.checked){
+                       minPrice=element.value;
+                       maxPrice=element.title;
+                    }
+        
+                  });
+              categories.forEach((element)=>{
+                 if(element.checked){
+                    if(!category.includes(element.value)){
+                      category.push(element.value);
+                    }
+                       
+                    }
+        
+                  });
+              console.log(category);
+              window.location.replace("/searchPage?"+(rate?'rate='+rate:'')+(minPrice?'&minPrice='+minPrice:'')+(maxPrice?'&maxPrice='+maxPrice:'')+(category.length!=0?'&category='+category:''));
+
+            })
+
+          })
+         
+        
+        });
+  
+          
+        
+       
+</script>
+
+
+{% endblock %}

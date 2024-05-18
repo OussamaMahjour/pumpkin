@@ -1,0 +1,55 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('login') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('login') }}
+    {% endblock %}
+
+
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<section class="container  my-5 forms position-relative">
+            <div class="form  login mx-auto">
+                <div class="form-content">
+                    <h1><i class="fa-solid fa-2xl fa-user-tie"></i><br><br>Admin</h1>
+                    <form action="/adminLogin" method="post">
+                        <div class="field input-field">
+                            <input  required
+                                    type="email" 
+                                    placeholder="Email" 
+                                    class="input {{errors.email ? 'is-invalid' : ''}}"
+                                    value="{{old.email}}"
+                                    name="email">
+                        </div>
+                        <div class="invalid-feedback d-block" role="alert">
+                                <small>{{ errors.email | first }}</small>      
+                            </div>
+                        <div class="field input-field">
+                            <input  required 
+                                    type="password" 
+                                    name="password" 
+                                    placeholder="Password" 
+                                    class="password {{errors.password ? 'is-invalid' : ''}}">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        <div class="invalid-feedback d-block" role="alert">
+                                <small>{{ errors.password | first }}</small>    
+                            </div>
+                       
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+                    
+                </div>
+               
+            </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+.c-item {
+  height: 480px;
+  z-index:0;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index:0;
+}
+body{
+    background-color:#FCF1E7;
+}
+.title{
+   border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-card-widget{
+  width: 10rem;
+  border:0;
+  overflow: hidden;
+  padding-bottom: -0.2rem;
+}
+
+.basket-button{
+transition: 0.3s ease;
+}
+
+
+.promotion {
+  color: white;
+  border: 1px solid black;
+  width: 100px;
+  top:10px;
+  left: -25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow:hidden;
+  height: 25px; /* Adjust this value based on the width to maintain the aspect ratio */
+  background-color: rgb(116, 105, 69); /* Adjust color as needed */
+  rotate:-45deg;
+}

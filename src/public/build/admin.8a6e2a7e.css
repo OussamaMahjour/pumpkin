@@ -1,0 +1,125 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/admin/index.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/admin/index.scss (1) ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+body {
+  height: 100vh;
+  background-color: #FCF1E7;
+}
+
+.side-bar {
+  height: 100%;
+}
+
+.navbar-list li {
+  border-bottom: 1px solid rgba(136, 136, 136, 0.753);
+  margin-bottom: 1rem;
+}
+
+.navbar-list li a {
+  color: rgba(136, 136, 136, 0.753);
+}
+
+.navbar-list li a:hover {
+  color: white;
+}
+
+.navbar-list li:hover {
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.navbar-list li i {
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.active {
+  color: white;
+  border-bottom: white;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.top-cards .card {
+  border-left: 5px solid #212529;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.top-cards .card i {
+  color: #dddfeb;
+}
+
+.content {
+  display: none;
+  height: 85vh;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.active-content {
+  display: inline-block;
+}
+
+.customers, .products, .orders {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.addProduct, .addCustomer {
+  border-radius: 50px;
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  bottom: 6rem;
+  right: 7rem;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.table-wrapper {
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.table thead th {
+  position: sticky;
+}
+
+.popUp-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  z-index: 40;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popUp {
+  height: 80%;
+  background-color: white;
+}
+
+.addCustomer-popUp, .editCustomer-popUp {
+  width: 30%;
+}
+
+.input-field {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWRtaW4uOGE2ZTJhN2UuY3NzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFDQTtFQUNJO0VBQ0E7QUFDSjs7QUFDQTtFQUNJO0FBRUo7O0FBQUE7RUFDSTtFQUNBO0FBR0o7O0FBQUE7RUFDSTtBQUdKOztBQURBO0VBQ0k7QUFJSjs7QUFGQTtFQUNJO0FBS0o7O0FBRkE7RUFDSTtFQUNBO0VBQ0E7RUFDQTtBQUtKOztBQUZBO0VBQ0k7RUFDQTtFQUNBO0FBS0o7O0FBSEE7RUFDSTtFQUNBO0FBTUo7O0FBRkE7RUFDSTtBQUtKOztBQUhBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FBTUo7O0FBSEE7RUFDSTtBQU1KOztBQUpBO0VBQ0k7QUFPSjs7QUFMQTtFQUNJO0VBQ0E7QUFRSjs7QUFKQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FBT0o7O0FBSEE7RUFDSTtFQUNBO0FBTUo7O0FBSEE7RUFDSTtBQU1KOztBQUhBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtBQU1KOztBQUhBO0VBRUk7RUFDQTtBQUtKOztBQURBO0VBQ1E7QUFJUjs7QUFDQTtFQUNJO0VBQ0E7QUFFSixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vUHVtcGtpbi8uL3Jlc291cmNlcy9jc3MvYWRtaW4vaW5kZXguc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1BbnRvbiZmYW1pbHk9SW5jb25zb2xhdGE6d2dodEAyMDAuLjkwMCZmYW1pbHk9TnVuaXRvOml0YWwsd2dodEAwLDIwMC4uMTAwMDsxLDIwMC4uMTAwMCZkaXNwbGF5PXN3YXAnKTtcbmJvZHl7XG4gICAgaGVpZ2h0OiAxMDB2aDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNGQ0YxRTc7XG59XG4uc2lkZS1iYXJ7XG4gICAgaGVpZ2h0OiAxMDAlO1xufVxuLm5hdmJhci1saXN0IGxpe1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDEzNiwgMTM2LCAxMzYsIDAuNzUzKTtcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xuICAgIFxufVxuLm5hdmJhci1saXN0IGxpIGEge1xuICAgIGNvbG9yOiByZ2JhKDEzNiwgMTM2LCAxMzYsIDAuNzUzKTtcbn1cbi5uYXZiYXItbGlzdCBsaSBhOmhvdmVye1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cbi5uYXZiYXItbGlzdCBsaTpob3ZlcntcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiKDIwOSwgMjA5LCAyMDkpO1xuICAgXG59XG4ubmF2YmFyLWxpc3QgbGkgaSB7XG4gICAgd2lkdGg6IDFyZW07XG4gICAgaGVpZ2h0OiAxcmVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBcbn1cbi5hY3RpdmV7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlci1ib3R0b206IHdoaXRlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMCkgIWltcG9ydGFudDtcbn1cbi50b3AtY2FyZHMgLmNhcmR7XG4gICAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCAjMjEyNTI5O1xuICAgIGZvbnQtZmFtaWx5OiAnTnVuaXRvJywtYXBwbGUtc3lzdGVtLEJsaW5rTWFjU3lzdGVtRm9udCxcIlNlZ29lIFVJXCIsUm9ib3RvLFwiSGVsdmV0aWNhIE5ldWVcIixBcmlhbCxzYW5zLXNlcmlmLFwiQXBwbGUgQ29sb3IgRW1vamlcIixcIlNlZ29lIFVJIEVtb2ppXCIsXCJTZWdvZSBVSSBTeW1ib2xcIixcIk5vdG8gQ29sb3IgRW1vamlcIjtcbiAgICBcblxufVxuLnRvcC1jYXJkcyAuY2FyZCBpe1xuICAgIGNvbG9yOiNkZGRmZWI7XG59XG4uY29udGVudHtcbiAgICBkaXNwbGF5Om5vbmU7XG4gICAgaGVpZ2h0OiA4NXZoO1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgcGFkZGluZzogMC41cmVtO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgXG59XG4ubmF2LWxpbmt7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmFjdGl2ZS1jb250ZW50e1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cbi5jdXN0b21lcnMsLnByb2R1Y3RzLC5vcmRlcnN7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgYm94LXNoYWRvdzogcmdiYSgwLCAwLCAwLCAwLjI0KSAwcHggM3B4IDhweDtcbn1cblxuXG4uYWRkUHJvZHVjdCwuYWRkQ3VzdG9tZXJ7XG4gICAgYm9yZGVyLXJhZGl1czogNTBweDtcbiAgICBoZWlnaHQ6IDNyZW07XG4gICAgd2lkdGg6IDNyZW07XG4gICAgcG9zaXRpb246Zml4ZWQ7XG4gICAgYm90dG9tOiA2cmVtO1xuICAgIHJpZ2h0OiA3cmVtO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cbn1cblxuLnRhYmxlLXdyYXBwZXJ7XG4gICAgbWF4LWhlaWdodDogODAlO1xuICAgIG92ZXJmbG93LXk6IGF1dG87XG5cbn1cbi50YWJsZSB0aGVhZCB0aHtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuXG59XG4ucG9wVXAtY29udGFpbmVye1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBoZWlnaHQ6IDEwMHZoO1xuICAgIHdpZHRoOiAxMDB2dztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDAwODA7XG4gICAgei1pbmRleDogNDA7XG4gICAgZGlzcGxheTpub25lO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cbn1cbi5wb3BVcHtcbiAgICBcbiAgICBoZWlnaHQ6IDgwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcblxuICAgIFxufVxuLmFkZEN1c3RvbWVyLXBvcFVwLC5lZGl0Q3VzdG9tZXItcG9wVXB7IFxuICAgICAgICB3aWR0aDogMzAlO1xufVxuXG5cblxuLmlucHV0LWZpZWxke1xuICAgIG1hcmdpbi10b3A6IDAuNXJlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAwLjVyZW07XG5cbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

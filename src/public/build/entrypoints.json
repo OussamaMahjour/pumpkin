@@ -1,13 +1,122 @@
 {
   "entrypoints": {
-    "header": {
+    "404": {
       "js": [
-        "/build/runtime.fce38b99.js",
-        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.dee01994.js",
-        "/build/header.0fdc1f98.js"
+        "/build/runtime.5db0783c.js",
+        "/build/404.1e55bdd8.js"
       ],
       "css": [
-        "/build/header.68ed66d5.css"
+        "/build/404.c57a6fec.css"
+      ]
+    },
+    "layout": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_popperjs_core_lib_index_js.f30d3d9a.js",
+        "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_function-appl-0fa2a2.dd1b84a8.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.a810aa06.js",
+        "/build/vendors-node_modules_core-js_modules_es_promise_js.609904dc.js",
+        "/build/vendors-node_modules_core-js_modules_es_string_replace_js.9670b994.js",
+        "/build/layout.b826352f.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_bootstrap_dist_css_bootstrap_css.e354754b.css",
+        "/build/layout.9e972bd5.css"
+      ]
+    },
+    "login": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_popperjs_core_lib_index_js.f30d3d9a.js",
+        "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_function-appl-0fa2a2.dd1b84a8.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.a810aa06.js",
+        "/build/vendors-node_modules_core-js_modules_es_string_replace_js.9670b994.js",
+        "/build/login.e459bf92.js"
+      ],
+      "css": [
+        "/build/login.13e731d2.css"
+      ]
+    },
+    "account": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_popperjs_core_lib_index_js.f30d3d9a.js",
+        "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_function-appl-0fa2a2.dd1b84a8.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.a810aa06.js",
+        "/build/vendors-node_modules_core-js_modules_es_promise_js.609904dc.js",
+        "/build/account.b30b7d49.js"
+      ],
+      "css": [
+        "/build/account.a433ea02.css"
+      ]
+    },
+    "index": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/index.2be7fa60.js"
+      ],
+      "css": [
+        "/build/index.5bfdc339.css"
+      ]
+    },
+    "bootstrap": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_popperjs_core_lib_index_js.f30d3d9a.js",
+        "/build/bootstrap.447ea69a.js"
+      ]
+    },
+    "search": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/search.0063a193.js"
+      ],
+      "css": [
+        "/build/search.1dcce772.css"
+      ]
+    },
+    "basket": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/basket.51742750.js"
+      ],
+      "css": [
+        "/build/basket.9d6c22b4.css"
+      ]
+    },
+    "product": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_function-appl-0fa2a2.dd1b84a8.js",
+        "/build/vendors-node_modules_core-js_modules_es_promise_js.609904dc.js",
+        "/build/vendors-node_modules_core-js_modules_es_string_replace_js.9670b994.js",
+        "/build/product.7da8c694.js"
+      ],
+      "css": [
+        "/build/product.23e0d50b.css"
+      ]
+    },
+    "admin": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/vendors-node_modules_popperjs_core_lib_index_js.f30d3d9a.js",
+        "/build/vendors-node_modules_core-js_internals_export_js-node_modules_core-js_internals_function-appl-0fa2a2.dd1b84a8.js",
+        "/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.a810aa06.js",
+        "/build/vendors-node_modules_core-js_modules_es_promise_js.609904dc.js",
+        "/build/admin.c485a5a9.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_bootstrap_dist_css_bootstrap_css.e354754b.css",
+        "/build/admin.8a6e2a7e.css"
+      ]
+    },
+    "pay": {
+      "js": [
+        "/build/runtime.5db0783c.js",
+        "/build/pay.7febd8da.js"
+      ],
+      "css": [
+        "/build/pay.b4967614.css"
       ]
     }
   }

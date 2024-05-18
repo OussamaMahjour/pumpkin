@@ -1,0 +1,37 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/search.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.search-product-card {
+  width: 10rem;
+  border: 0;
+  overflow: hidden;
+}
+
+.side-bar .filter-content {
+  display: none;
+}
+
+.side-bar .filter {
+  width: 100%;
+}
+
+.promotion {
+  color: white;
+  border: 1px solid black;
+  width: 100px;
+  top: 10px;
+  left: -25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  height: 25px; /* Adjust this value based on the width to maintain the aspect ratio */
+  background-color: rgb(116, 105, 69); /* Adjust color as needed */
+  rotate: -45deg;
+}
+
+.filter {
+  height: 80vh;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VhcmNoLjFkY2NlNzcyLmNzcyIsIm1hcHBpbmdzIjoiOzs7QUFBQTtFQUNJO0VBQ0E7RUFDQTtBQUNKOztBQUNFO0VBQ0U7QUFFSjs7QUFBRTtFQUNFO0FBR0o7O0FBQUU7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUFHSjs7QUFEQTtFQUNFO0FBSUYsQyIsInNvdXJjZXMiOlsid2VicGFjazovL1B1bXBraW4vLi9yZXNvdXJjZXMvY3NzL3NlYXJjaC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi5zZWFyY2gtcHJvZHVjdC1jYXJke1xuICAgIHdpZHRoOiAxMHJlbTtcbiAgICBib3JkZXI6MDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICB9XG4gIC5zaWRlLWJhciAuZmlsdGVyLWNvbnRlbnR7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgfVxuICAuc2lkZS1iYXIgLmZpbHRlcntcbiAgICB3aWR0aDogMTAwJTtcbiAgXG4gIH1cbiAgLnByb21vdGlvbiB7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrO1xuICAgIHdpZHRoOiAxMDBweDtcbiAgICB0b3A6MTBweDtcbiAgICBsZWZ0OiAtMjVweDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBvdmVyZmxvdzpoaWRkZW47XG4gICAgaGVpZ2h0OiAyNXB4OyAvKiBBZGp1c3QgdGhpcyB2YWx1ZSBiYXNlZCBvbiB0aGUgd2lkdGggdG8gbWFpbnRhaW4gdGhlIGFzcGVjdCByYXRpbyAqL1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxMTYsIDEwNSwgNjkpOyAvKiBBZGp1c3QgY29sb3IgYXMgbmVlZGVkICovXG4gICAgcm90YXRlOi00NWRlZztcbiAgfVxuLmZpbHRlcntcbiAgaGVpZ2h0OiA4MHZoIDtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

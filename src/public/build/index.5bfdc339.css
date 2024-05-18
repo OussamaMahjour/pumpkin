@@ -1,0 +1,51 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./resources/css/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.c-item {
+  height: 480px;
+  z-index: 0;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+body {
+  background-color: #FCF1E7;
+}
+
+.title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-card-widget {
+  width: 10rem;
+  border: 0;
+  overflow: hidden;
+  padding-bottom: -0.2rem;
+}
+
+.basket-button {
+  transition: 0.3s ease;
+}
+
+.promotion {
+  color: white;
+  border: 1px solid black;
+  width: 100px;
+  top: 10px;
+  left: -25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  height: 25px; /* Adjust this value based on the width to maintain the aspect ratio */
+  background-color: rgb(116, 105, 69); /* Adjust color as needed */
+  rotate: -45deg;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguNWJmZGMzMzkuY3NzIiwibWFwcGluZ3MiOiI7OztBQUFBO0VBQ0U7RUFDQTtBQUNGOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7QUFDRjs7QUFDQTtFQUNJO0FBRUo7O0FBQUE7RUFDRztFQUNDO0FBR0o7O0FBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtBQUdGOztBQUFBO0VBQ0E7QUFHQTs7QUFDQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtBQUVGLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9QdW1wa2luLy4vcmVzb3VyY2VzL2Nzcy9pbmRleC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi5jLWl0ZW0ge1xuICBoZWlnaHQ6IDQ4MHB4O1xuICB6LWluZGV4OjA7XG59XG5cbi5jLWltZyB7XG4gIGhlaWdodDogMTAwJTtcbiAgb2JqZWN0LWZpdDogY292ZXI7XG4gIGZpbHRlcjogYnJpZ2h0bmVzcygwLjYpO1xuICB6LWluZGV4OjA7XG59XG5ib2R5e1xuICAgIGJhY2tncm91bmQtY29sb3I6I0ZDRjFFNztcbn1cbi50aXRsZXtcbiAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDEwcHg7XG4gICAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDEwcHg7XG59XG5cbi5wcm9kdWN0LWNhcmQtd2lkZ2V0e1xuICB3aWR0aDogMTByZW07XG4gIGJvcmRlcjowO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBwYWRkaW5nLWJvdHRvbTogLTAuMnJlbTtcbn1cblxuLmJhc2tldC1idXR0b257XG50cmFuc2l0aW9uOiAwLjNzIGVhc2U7XG59XG5cblxuLnByb21vdGlvbiB7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gIHdpZHRoOiAxMDBweDtcbiAgdG9wOjEwcHg7XG4gIGxlZnQ6IC0yNXB4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBvdmVyZmxvdzpoaWRkZW47XG4gIGhlaWdodDogMjVweDsgLyogQWRqdXN0IHRoaXMgdmFsdWUgYmFzZWQgb24gdGhlIHdpZHRoIHRvIG1haW50YWluIHRoZSBhc3BlY3QgcmF0aW8gKi9cbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExNiwgMTA1LCA2OSk7IC8qIEFkanVzdCBjb2xvciBhcyBuZWVkZWQgKi9cbiAgcm90YXRlOi00NWRlZztcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

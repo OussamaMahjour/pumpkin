@@ -1,0 +1,72 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('login') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('login') }}
+    {% endblock %}
+
+
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<section class="container  my-5 forms position-relative">
+            <div class="form  login mx-auto">
+                <div class="form-content">
+                    <h1>Login</h1>
+                    <form action="/login" method="post">
+                        <div class="field input-field">
+                            <input  required
+                                    type="email" 
+                                    placeholder="Email" 
+                                    class="input {{errors.email ? 'is-invalid' : ''}}"
+                                    value="{{old.email}}"
+                                    name="email">
+                        </div>
+                        <div class="invalid-feedback d-block" role="alert">
+                                <small>{{ errors.email | first }}</small>      
+                            </div>
+                        <div class="field input-field">
+                            <input  required 
+                                    type="password" 
+                                    name="password" 
+                                    placeholder="Password" 
+                                    class="password {{errors.password ? 'is-invalid' : ''}}">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        <div class="invalid-feedback d-block" role="alert">
+                                <small>{{ errors.password | first }}</small>    
+                            </div>
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="/signup" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                   
+                        <i class='fa-brands fa-facebook-f facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+                <div class="media-options">
+                    <a href="#" class="field google">
+                    <i class="fa-brands fa-google google-img" style="color: #111;" ></i>
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+            </div>
+</section>
+
+
+{% endblock %}

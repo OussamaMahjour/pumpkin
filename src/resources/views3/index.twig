@@ -1,0 +1,28 @@
+
+{% extends 'layout.twig' %}
+
+{% block content %}
+   <div class="container">
+      <div class="row container mx-auto my-2">
+      
+          <img class="img-rounded  mx-right" height="500" src="{{ asset('build/imgs/image1.png') }}">
+      <div class="col-4 bg-primary">
+   `  </div>
+   </div>
+   <div class="row container border gy-4  mx-auto">
+         {% for i in 0..11 %}
+         <div class="card col-2 mx-2" style="width:15rem;">
+            <img src="{{ asset('build/imgs/image1.png') }}" class="card-img-top" alt="Product">
+            <div class="card-body">
+               <h5 class="card-title"></h5>
+               <p class="card-text">
+                  Something there that here was lo lfsdjk;asdf
+               </p>
+               <a href="#" class="btn btn-primary">GO </a>
+            </div>
+         </div>
+        {% endfor %}
+      </div>
+   </div>
+
+{% endblock %}

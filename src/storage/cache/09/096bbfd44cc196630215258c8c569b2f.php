@@ -24,31 +24,30 @@ class __TwigTemplate_e978588043ad8a0231e5346ea0de92d4 extends Template
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
-            'stylesheets' => [$this, 'block_stylesheets'],
+            'content' => [$this, 'block_content'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 2
+        return "layout.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 4
-        echo "
-";
+        $this->parent = $this->loadTemplate("layout.twig", "index.twig", 2);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 1
-    public function block_stylesheets($context, array $blocks = [])
+    // line 4
+    public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 2
-        echo "  ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("header");
-        echo "
+        // line 5
+        echo "    
 ";
     }
 
@@ -63,9 +62,17 @@ class __TwigTemplate_e978588043ad8a0231e5346ea0de92d4 extends Template
     /**
      * @codeCoverageIgnore
      */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
     public function getDebugInfo()
     {
-        return array (  49 => 2,  45 => 1,  40 => 4,  38 => 1,);
+        return array (  50 => 5,  46 => 4,  35 => 2,);
     }
 
     public function getSourceContext()

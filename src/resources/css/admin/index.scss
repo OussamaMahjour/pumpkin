@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{
+    height: 100vh;
+    background-color:#FCF1E7;
+}
+.side-bar{
+    height: 100%;
+}
+.navbar-list li{
+    border-bottom: 1px solid rgba(136, 136, 136, 0.753);
+    margin-bottom: 1rem;
+    
+}
+.navbar-list li a {
+    color: rgba(136, 136, 136, 0.753);
+}
+.navbar-list li a:hover{
+    color: white;
+}
+.navbar-list li:hover{
+    border-bottom: 1px solid rgb(209, 209, 209);
+   
+}
+.navbar-list li i {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    align-items: center;
+  
+}
+.active{
+    color: white;
+    border-bottom: white;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.top-cards .card{
+    border-left: 5px solid #212529;
+    font-family: 'Nunito',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
+
+}
+.top-cards .card i{
+    color:#dddfeb;
+}
+.content{
+    display:none;
+    height: 85vh;
+    overflow: hidden;
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 10px;
+   
+}
+.nav-link{
+    cursor: pointer;
+}
+.active-content{
+    display: inline-block;
+}
+.customers,.products,.orders{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.addProduct,.addCustomer{
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+    position:fixed;
+    bottom: 6rem;
+    right: 7rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.table-wrapper{
+    max-height: 80%;
+    overflow-y: auto;
+
+}
+.table thead th{
+    position: sticky;
+
+}
+.popUp-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000080;
+    z-index: 40;
+    display:none;
+    align-items: center;
+    justify-content: center;
+
+}
+.popUp{
+    
+    height: 80%;
+    background-color: white;
+
+    
+}
+.addCustomer-popUp,.editCustomer-popUp{ 
+        width: 30%;
+}
+
+
+
+.input-field{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}

@@ -1,27 +1,34 @@
 <?php
 
-// replace with path to your own project bootstrap file
-$app = require __DIR__."/bootstrap.php";
+declare(strict_types = 1);
+
+use App\Config;
+use Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager;
+use Doctrine\Migrations\Configuration\Migration\PhpFile;
+use Doctrine\Migrations\DependencyFactory;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
+use Symfony\Component\Console\Application;
+
+$app       = require 'bootstrap.php';
 $container = $app->getContainer();
+$config    = $container->get(Config::class);
 
+$entityManager     = $container->get(EntityManager::class);
+$dependencyFactory = DependencyFactory::fromEntityManager(
+    new PhpFile(CONFIG_PATH . '/migrations.php'),
+    new ExistingEntityManager($entityManager)
+);
 
-$config = new PhpFile('migrations.php');
-// replace with mechanism to retrieve EntityManager in your app
-$entityManager = $container->get(EntityManager::class);
+$migrationCommands = require CONFIG_PATH . '/commands/migration_commands.php';
+$customCommands    = require CONFIG_PATH . '/commands/commands.php';
 
+$cliApp = new Application($config->app_name, $config->app_version);
 
-//$dependencyFactory = DependencyFactory::fromEntityManager($config, new ExistingEntityManager($entityManager));
+ConsoleRunner::addCommands($cliApp, new SingleManagerProvider($entityManager));
 
-$commands = [
-   
-];
+$cliApp->addCommands($migrationCommands($dependencyFactory));
+$cliApp->addCommands(array_map(fn($command) => $container->get($command), $customCommands));
 
-$application = new Application('Pumpkin','1.0');
-
-// ... register commands
-
-ConsoleRunner::addCommands($application,new SingleManagerProvider($entityManager));
-
-$application->addCommands($commands);
-
-$application->run();
+$cliApp->run();

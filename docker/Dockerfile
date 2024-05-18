@@ -17,10 +17,13 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash \
 
 RUN curl -sS https://getcomposer.org/installer |php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN docker-php-ext-install pdo pdo_mysql
-RUN composer require --dev phpunit/phpunit ^11
 
 RUN docker-php-ext-configure intl
+
+RUN docker-php-ext-install pdo pdo_mysql intl
+RUN composer require --dev phpunit/phpunit ^11
+
+
 
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug

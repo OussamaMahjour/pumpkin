@@ -1,0 +1,91 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {% block additional_stylesheets %}
+            {{ encore_entry_link_tags('login') }}
+            
+            
+    {% endblock %}
+
+    {% block additional_javascripts %}
+            {{ encore_entry_script_tags('login') }}
+    {% endblock %}
+
+{{ old | json_encode }}
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <h1>Configuration</h1>
+                    <form action="/config" method="post">
+                        <div class="field input-field" style="display:flex;justify-content:space-between;">
+                            
+                            <input type="text" 
+                                    placeholder="First Name"  
+                                    style="width:47%;" 
+                                    name="first_name" 
+                                    class="input form-control form-control-lg {{errors.first_name ? 'is-invalid' : ''}}"
+                                    value="{{ old.first_name}}"
+                                    >
+                            
+                            <input type="text" 
+                                    style="width:47%;"  
+                                    placeholder="Last Name" 
+                                    name="last_name" 
+                                    class="input form-control form-control-lg {{errors.last_name ? 'is-invalid' : ''}}"
+                                    value="{{ old.last_name}}"
+                                    >   
+                        
+                        
+                        </div>
+                        <div style="display:flex;justify-content:space-between;">
+                         <div class="invalid-feedback d-block"  role="alert">
+                                <small>{{ errors.first_name | first }}</small>     
+                            </div>
+                             <div class="invalid-feedback d-block"  role="alert">
+                                <small>{{ errors.last_name | first }}</small>     
+                            </div>
+                        </div>
+                        <div class="field input-field">  
+
+                             <input type="text" 
+                                    placeholder="Adress"  
+                                    name="adress" 
+                                    class="input form-control form-control-lg {{errors.adress ? 'is-invalid' : ''}}"
+                                    value="{{ old.adress}}"
+                                    >
+                        </div>
+                         <div class="invalid-feedback d-block"  role="alert">
+                                <small>{{ errors.adress | first }}</small>     
+                            </div>
+                         <div class="field input-field">                          
+                             <input type="text" 
+                                    placeholder="dd/mm/yy"  
+                                    name="birthDate" 
+                                    class="input form-control form-control-lg {{errors.birthDate ? 'is-invalid' : ''}}"
+                                    value="{{ old.birthDate}}"
+                                    >
+                        </div>
+                         <div class="invalid-feedback d-block"  role="alert">
+                                <small>{{ errors.birthDate | first }}</small>     
+                            </div>
+                         
+                        
+                        <div class="field button-field">
+                            <button type="submit" >Save</button>
+                        </div>
+                    </form>
+                    
+            </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

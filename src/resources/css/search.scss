@@ -1,0 +1,29 @@
+.search-product-card{
+    width: 10rem;
+    border:0;
+    overflow: hidden;
+  }
+  .side-bar .filter-content{
+    display: none;
+  }
+  .side-bar .filter{
+    width: 100%;
+  
+  }
+  .promotion {
+    color: white;
+    border: 1px solid black;
+    width: 100px;
+    top:10px;
+    left: -25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow:hidden;
+    height: 25px; /* Adjust this value based on the width to maintain the aspect ratio */
+    background-color: rgb(116, 105, 69); /* Adjust color as needed */
+    rotate:-45deg;
+  }
+.filter{
+  height: 80vh ;
+}
